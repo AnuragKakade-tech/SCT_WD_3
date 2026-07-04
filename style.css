@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #0b0c10;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background-color: #11141a;
+    border: 1px solid #1f2833;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #66fcf1;
+}
+
+.mode-select {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #1f2833;
+    color: #c5c6c7;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.mode-btn.active {
+    background-color: rgba(102, 252, 241, 0.1);
+    border-color: #66fcf1;
+    color: #66fcf1;
+}
+
+.status {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #c5c6c7;
+    height: 24px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.cell {
+    background-color: #1f2833;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #242f3d;
+}
+
+.cell[data-value="X"] { color: #66fcf1; }
+.cell[data-value="O"] { color: #ff4757; }
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: #66fcf1;
+    border: 2px solid #66fcf1;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #66fcf1;
+    color: #0b0c10;
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.3);
+}
